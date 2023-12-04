@@ -26,11 +26,40 @@ h2 :is(p) {
     margin-top: 30px;
 }
 
+/*Landing page*/
 .brandName {
     color:color-mix(in hwb increasing hue, #ffcb77 50%, #ffa400 50%) ;
     font-style: italic;
 }
 
+
+/*animation for brand name*/
+@keyframes dropAndPop {
+    0% {
+        transform: translateY(-50px) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.brandName {
+    animation: dropAndPop 1s ease-out  ; /* Adjust the duration and timing function as needed */
+}
+
+
+.highlighted-text {
+    color: #FFA400;
+    border-radius: 7px;
+    font-size: 40px;
+    font-weight: 400;
+}
 ::-webkit-scrollbar {
     display: none;
 }
