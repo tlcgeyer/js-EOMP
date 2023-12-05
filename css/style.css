@@ -26,12 +26,36 @@ h2 :is(p) {
     margin-top: 30px;
 }
 
+
 /*Landing page*/
 .brandName {
     color:color-mix(in hwb increasing hue, #ffcb77 50%, #ffa400 50%) ;
     font-style: italic;
 }
 
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain the image aspect ratio and cover the entire container */
+}
+
+.card-footer {
+    background-color: #ffcb77;
+    color: #ffffff;
+}
+
+.card-footer:hover {
+    background-color: #FFA400;
+  }
+
+  .card-footer:hover span {
+    color: #fff; 
+  }
 
 /*animation for brand name*/
 @keyframes dropAndPop {
