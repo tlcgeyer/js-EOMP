@@ -35,13 +35,20 @@ h2 :is(p) {
 
 .card {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: #ffcb77;
+
 }
 
 .card-img-top {
-    height: 400px; /* Adjust the height as needed */
-    object-fit: cover; /* Maintain the image aspect ratio and cover the entire container */
+    height: 200px; 
+    width:100%;
+    object-fit: cover; 
 }
 
 .card-footer {
@@ -76,7 +83,6 @@ h2 :is(p) {
 .brandName {
     animation: dropAndPop 1s ease-out  ; /* Adjust the duration and timing function as needed */
 }
-
 
 .highlighted-text {
     color: #FFA400;
@@ -129,7 +135,17 @@ body {
     text-align: center;
 }
 
+
+/*Products*/ 
+
+
 /*Footer*/
 .lead {
     color: black;
+}
+
+
+#productWrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
