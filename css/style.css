@@ -187,3 +187,8 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+/*Checkout*/
+#mangaTable .card {
+    min-height: 400px; /
+}
