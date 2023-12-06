@@ -18,7 +18,7 @@ JSON.stringify (
             "genre": "Shounen",
             "about": "Gege Akutami's Jujutsu Kaisen is an illustrated Japanese manga series that was first published in the Weekly Shonen Jump magazine in March 2018. It has since been collected and released in various volumes.",
             amount: 350,
-            "image": "https://i.postimg.cc/T2ZkRPz4/Jujutsu-Kaisen-manga.jpg"
+            "image": "/images/Jujutsu Kaisen manga.jpg"
         },
         {
             "id": 2,
@@ -181,7 +181,7 @@ displayProducts(manga)
 let searchManga = document.querySelector(`[data-search-products]`);
 searchManga.addEventListener(`keyup`, () => {
     let searchFilter = manga.filter((item) => {
-        return item.name
+        return item.genre
         .toLowerCase()
         .includes(searchManga.value.toLowerCase())
     });
