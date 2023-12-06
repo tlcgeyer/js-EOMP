@@ -64,41 +64,30 @@
         </nav>
 
         <main class="container-fluid">
+
           <section class="container">
+
           <div class="row"> 
+
             <h2 class="highlighted-text">Products</h2>
-          </div>
-          <div class="row d-block d-md-flex">
-            <div class="col">
-              <input id="seacrchByGenre" type="text" placeholder="Search by genre..." class="form-control">
-              <div class="input-group-append">
-                <div class="dropdown">
-                  <button class="btn btn-dark text-warning dropdown-toggle" type="button" id="genreDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                  <div class="dropdown-menu" aria-labelledby="genreDropdown">
-                    <a class="dropdown-item" href="#" data-genre="Shounen">Shounen</a>
-                    <a class="dropdown-item" href="#" data-genre="Shojo">Shojo</a>
-                    <a class="dropdown-item" href="#" data-genre="Josei">Josei</a>
-                    <a class="dropdown-item" href="#" data-genre="Seinen">Seinen</a>
-                    <a class="dropdown-item" href="#" data-genre="Slice of Life">Slice of Life</a>
-                    <a class="dropdown-item" href="#" data-genre="Isekai">Isekai</a>
-                    <a class="dropdown-item" href="#" data-genre="Mecha">Mecha</a>
-                    <a class="dropdown-item" href="#" data-genre="Kodomo">Kodomo</a>
-                  </div>
-            </div>
-
-
             
-            <div class="col">
-              <button class="btn btn-dark text-warning" id="sortByPrice">
-                Sorting
-              </button>
+          </div>
+          <div class="row d-block d-flex ">
+            <div class="row">
+              <div class="col">
+                <input id="searchProducts" type="text" placeholder="Search by genre..." class="form-control" data-search-products>
+                </div>
+              
+              <div class="col d-flex justify-content-end">
+                <button class="btn btn-dark text-warning" id="sortProducts" data-sorted-products>
+                  Sorting
+                </button>
+              </div>
             </div>
           </div>
-           <!-- <div id="productWrapper"></div> -->
           </section>
 
-         
-
+          <div class="row d-block d-md-flex justify-content-center w-100 data" id="manga" data-my-manga></div>
         </main>
         <br><br>
     <!--Footer-->
