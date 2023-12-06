@@ -1,18 +1,82 @@
-//Footer
-document.querySelector('#currentYear').textContent =
+//Footer date
+document.querySelector('#currentYear').textContent =    
 new Date().getUTCFullYear()
 
+
+//List of products/items(manga) being loaded into the cart
+let cartSize = JSON.parse(localStorage.getItem('checkout'))?.length || 0
+// products
+let products = JSON.parse(localStorage.getItem('products'))
+// Input element, search laptop by make
+let searchByMake = document.querySelector('#searchByGenre');
+// Sorting by price
+let sortingByPrice = document.querySelector('#sortByPrice');
+// Products wrapper
+let productCard = document.querySelector('[data-product-card]');
+// CheckOutList
+let CheckOutList = [];
+// Display data to the index.html
+
+function displayProducts(arg) {
+    try {
+        // Clear 
+        productCard.innerHTML = "";
+        // Display
+        if (arg) {
+            arg?.forEach((item) => {
+                productCard.innerHTML += `
+                <div class="card">
+                    <div class="card-header">
+                        <h3>${item.genre} ${item.about.split(' ')[0].slice(0, item.spec.indexOf(' '))}</h3> 
+                    </div>
+
+                    <div class="card-body">
+                        <img class="img-fluid" src="${item.image}" loading="lazy"/>
+                        <div>                    
+                            <span>About: 
+                                <li>${item.about}</li>
+                            </span>
+                        </div>
+
+                        <button class="btn btn-success text-dark" onclick='checkoutProducts(${JSON.stringify(item)})'>Add to cart</button>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center align-items-center">
+                        <p class="product-amount">Price: R${item.amount}</p>
+                    </div>
+                </div>
+                `
+            })
+        } else {
+            args = JSON.parse(localStorage.getItem("products"))
+            productCard.innerHTML =
+                
+            //Making use of a spinner to show that the list of items are being loaded 
+            `
+            <div class="justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            `
+            displayProducts(args)
+        }
+    } catch (e) {
+        console.error(`Error message: ${e.message}`);
+    }
+};
+displayProducts(products);
+
 //Products
-let products = JSON.parse(localStorage.getItem('products') ) ?
-JSON.parse(localStorage.getItem('products') ):
-localStorage.setItem('products', 
-JSON.stringify (
-    [
+// let products = JSON.parse(localStorage.getItem('products') ) ?
+// JSON.parse(localStorage.getItem('products') ):
+// localStorage.setItem('products', 
+// JSON.stringify (
+//     [
         {
             "id": 1,
             "name": "Jujtsu Kaisen",
             "genre": "Shounen",
-            "about": "Gege Akutami's Jujutsu Kaisen is an illustrated Japanese manga series that was first published in the Weekly Shnen Jump magazine in March 2018. It has since been collected and released in various volumes.",
+            "about": "Gege Akutami's Jujutsu Kaisen is an illustrated Japanese manga series that was first published in the Weekly Shonen Jump magazine in March 2018. It has since been collected and released in various volumes.",
             "amount": "350,00",
             "image": "https://i.postimg.cc/T2ZkRPz4/Jujutsu-Kaisen-manga.jpg"
         },
