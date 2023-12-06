@@ -33,16 +33,43 @@ h2 :is(p) {
     font-style: italic;
 }
 
+#searchProducts {
+    width: 80%;
+}
+
 .card {
     border: 1px solid #ccc;
     padding: 15px;
     text-align: center;
-    width: 300px;
+    width: 465px;
     margin: 20px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: #ffcb77;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
 
+#btn {
+    margin-bottom: 10px;
+    width: 50%;
+    margin-left: 105px;
+}
+
+#mangaPic {
+    height: 70%;
+    width: 50%;
+    margin-left: 110px;
+}
+
+#manga {
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+}
+
+#names {
+    color: #FFA400;
 }
 
 .card-img-top {
