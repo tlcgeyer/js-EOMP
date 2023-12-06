@@ -62,6 +62,12 @@ h2 :is(p) {
     margin-left: 110px;
 }
 
+#product-Img {
+    height: 70%;
+    width: 50%;
+    margin-left: 110px;
+}
+
 #manga {
     display: flex;
     flex-direction: row;
@@ -79,12 +85,12 @@ h2 :is(p) {
 }
 
 .card-footer {
-    background-color: #ffcb77;
+    background-color: blue;
     color: #ffffff;
 }
 
 .card-footer:hover {
-    background-color: #FFA400;
+    background-color: darkblue;
   }
 
   .card-footer:hover span {
@@ -156,6 +162,11 @@ body {
     color: #ffa400;
     font-size: medium;
 }
+
+.highlight-title {
+    color: #FFA400;
+}
+
 
 .text-change {
     font-size: medium;
