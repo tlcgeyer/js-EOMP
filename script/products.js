@@ -213,6 +213,7 @@ searchManga.addEventListener(`keyup`, () => {
          </div>
          
       `;
+      
     });
         }else {
             mangaTable.innerHTML = `<div class="text-center">
@@ -221,6 +222,7 @@ searchManga.addEventListener(`keyup`, () => {
             </div>
           </div>`;
         }
+        
 })
 
 
@@ -262,6 +264,8 @@ productSort.addEventListener('click', function(){
     });
 })
 
+
+//addin to cartt function
 function addCartToStorage(){
     localStorage.setItem("cart", JSON.stringify(cart))
 }
@@ -286,6 +290,22 @@ add.forEach((e, i)=>{
 })
 
 
+//Adding it to the checkout
+let checkOutList = JSON.parse(
+    localStorage.getItem('checkout')) ? 
+    JSON.parse(localStorage.getItem('checkout')) :
+    []
 
+    function checkOutManga(item) {
+        try {
+            
+            checkOutList.push(item);
+            document.querySelector('[cartSize]').textContent = checkOutList.length
+            localStorage.setItem('checkout', 
+            JSON.stringify(checkOutList))
+        } catch (e) {
+            // console.log(`Error message: ${e.message}`);
+        }
+    }
 
 
