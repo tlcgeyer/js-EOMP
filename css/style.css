@@ -193,3 +193,44 @@ body {
     min-height: 400px; /
 }
 
+
+/*Contact*/
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    font-weight: 700;
+}
+
+#theButton {
+    background-color: #FFA400;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  label {
+    color: #ffc107;
+  }
+  
+.container-section {
+    background-color: black;
+    border: 2px solid #ffffff; 
+    border-radius: 10px; 
+    padding: 20px;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
