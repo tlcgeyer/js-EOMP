@@ -135,7 +135,7 @@ JSON.stringify (
         {
             "id": 16,
             "name": "Astro Boy",
-            "genre": "Kodomo",
+            "genre": "Kodomo (for kids)",
             "about": "Astro Boy, known in Japan by its original name Mighty Atom, is a Japanese manga series written and illustrated by Osamu Tezuka. It was serialized in Kobunsha's Shōnen from 1952 to 1968. The 112 chapters were collected into 23 tankōbon volumes by Akita Shoten. Dark Horse Comics published an English translation in 2002.",
             amount: 200,
             "image": "/images/astro boy.jpg"
@@ -157,7 +157,7 @@ function displayProducts(daataa) {
                   <h5 class="card-title" id="names">${item.name}</h5>
                   <p class="card-text">${item.about}</p>
                   <p class="card-text" id="names">${item.genre}</p>
-                  <p class="card-text">R${item.amount}</p>
+                  <p class="card-text">R${item.amount},00</p>
                </div>
                <button class="btn btn-primary" id="btn">Add to Cart</button>
             </div>
@@ -196,7 +196,7 @@ searchManga.addEventListener(`keyup`, () => {
                   <h5 class="card-title" id="names">${item.name}</h5>
                   <p class="card-text">${item.about}</p>
                   <p class="card-text" id="names">${item.genre}</p>
-                  <p class="card-text">R${item.amount}</p>
+                  <p class="card-text">R${item.amount},00</p>
                </div>
                <button class="btn btn-primary" id="btn">Add to Cart</button>
             </div>
@@ -222,6 +222,7 @@ productSort.addEventListener('click', function(){
     mangaTable.innerHTML = ''
     highest = !highest;
 
+    //sortingg it from highest to lowestt & lowest to hughest
     let prods = [];
     if(highest){
         prods = manga.sort(function(prod1, prod2) {
@@ -241,11 +242,20 @@ productSort.addEventListener('click', function(){
                   <h5 class="card-title" id="names">${item.name}</h5>
                   <p class="card-text">${item.about}</p>
                   <p class="card-text" id="names">${item.genre}</p>
-                  <p class="card-text">R${item.amount}</p>
+                  <p class="card-text">R${item.amount},00</p>
                </div>
                <button class="btn btn-primary" id="btn">Add to Cart</button>
             </div>
          </div>
          
       `;
-    });})
+    });
+})
+
+//Adding to the carrt
+function addToCart(mangaTable) {
+    if(mangaTable) {
+        purchased.push(mangaTable)
+        localStorage.setItem('checkout', JSON.stringify(purchased))
+    }
+}
