@@ -7,6 +7,7 @@ new Date().getUTCFullYear()
  // Display selected manga items in the checkout table
  function displayCheckout() {
      let deBody = document.getElementById('deBody');
+     console.log(deBody)
      deBody.innerHTML = "";
 
      if (cart.length > 0) {
@@ -81,7 +82,6 @@ new Date().getUTCFullYear()
          }
      });
 
-     updateCartLocalStorage();
 
 
      displayCheckout();
