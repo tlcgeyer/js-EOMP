@@ -252,10 +252,4 @@ productSort.addEventListener('click', function(){
     });
 })
 
-//Adding to the carrt
-function addToCart(mangaTable) {
-    if(mangaTable) {
-        purchased.push(mangaTable)
-        localStorage.setItem('checkout', JSON.stringify(purchased))
-    }
-}
+
