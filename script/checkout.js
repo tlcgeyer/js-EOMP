@@ -19,20 +19,20 @@ function updateCheckout() {
     localStorage.setItem("checkout", JSON.stringify(checkOutList));
 }
 
-function checkOut() {
-    if (cart.length === 0) {
-       alert("The cart is empty. Add some manga before checking out");
-      return;
-    }
-    checkOutList = [...cart];
+// function checkOut() {
+//     if (cart.length === 0) {
+//        alert("The cart is empty. Add some manga before checking out");
+//       return;
+//     }
+//     checkOutList = [...cart];
   
- // clearing it after checking out
- cart = [];
- localStorage.removeItem("cart");
+//  // clearing it after checking out
+//  cart = [];
+//  localStorage.removeItem("cart");
 
- updateCheckout();
- displayCheckOut();
-}
+//  updateCheckout();
+//  displayCheckOut();
+// }
 
     cart.forEach((item) => {
       let totalAmount = item.quantity * item.amount ;
@@ -63,7 +63,17 @@ clearAll.addEventListener('click', () => {
 })
 
 
- // alert funkton for a success purchase
-function completePurchase() {
-    alert('Thank you for your purchase from InkWhirlWind!');
+//de purchase button 
+let deButton = document.querySelector('#proceedTo')
+
+function geKoop() {
+    if(cart) {
+        alert('Thank you for purchasing manga from InkWhirlWind!')
+        localStorage.clear(cart)
+
+    }else {
+        alert('Ayo, buy some manga!')
+    }
 }
+
+deButton.addEventListener('click', geKoop)

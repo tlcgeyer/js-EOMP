@@ -56,13 +56,9 @@ h2 :is(p) {
     margin-left: 105px;
 }
 
-#mangaPic {
-    height: 70%;
-    width: 50%;
-    margin-left: 110px;
-}
-
-#product-Img {
+#mangaPic,
+#product-Img,
+#productImg {
     height: 70%;
     width: 50%;
     margin-left: 110px;
@@ -241,4 +237,33 @@ input, textarea {
     padding: 20px;
     max-width: 600px; 
     margin: 0 auto; 
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h2 :is(span) {
+        font-size: large;
+    }
+
+    h2 :is(p) {
+        font-size: medium;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #mangaPic,
+    #product-Img,
+    #productImg {
+        width: 100%;
+        margin-left: 0;
+    }
 }
