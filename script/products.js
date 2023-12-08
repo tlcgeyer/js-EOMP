@@ -234,7 +234,7 @@ productSort.addEventListener('click', function(){
     mangaTable.innerHTML = ''
     highest = !highest;
 
-    //sortingg it from highest to lowestt & lowest to hughest
+    //sortingg it from highest to lowestt & lowest to highest
     let prods = [];
     if(highest){
         prods = manga.sort(function(prod1, prod2) {
