@@ -40,12 +40,12 @@ function displayProducts() {
                    <label>Name</label>
                    <br> <br>
                    <input type="text" id="deName${item.id}" placeholder="Enter the mangas name..." value="${
-                    item.id 
+                    item.name 
                   }">
                    <label>Genre</label>
                    <br><br>
                    <input type="text" id="deGenre${item.id}" placeholder="Enter the genres name..." value="${
-                     item.id
+                     item.genre
                    }">
                    <br><br>
                    <label>Image</label>
@@ -67,8 +67,6 @@ function displayProducts() {
                    }">
                    <br><br>
                  </form>
-
-
                    </div>
                  <div class="modal-footer">
             
@@ -81,8 +79,6 @@ function displayProducts() {
                <!--delete the goed-->
              <button id="btnD" value='${index} onclick='deleteManga(${JSON.stringify(index)})'><i class="bi bi-trash"></i></button>
               </td>
-               
-             
               </tr>
                `;
                 
@@ -108,8 +104,7 @@ function deleteManga(item) {
     displayProducts();
 }
 
-
-
+//for the button
   let btnAddManga = document.querySelector("#btn");
   function addNewManga() {
     let id = manga.map(item => item.id).at(-1) + 1 || 1;
