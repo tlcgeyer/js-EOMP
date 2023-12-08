@@ -172,17 +172,7 @@ body {
 
 
 /*Checkout*/
-.table {
-    margin: 1rem auto;
-    width: 100%;
-    border-radius: solid 10px 5px;
-    border-style: double;
-}
 
-#aboutTable {
-    font-weight: 600;
-    font-style: italic;
-}
 
 #changeIt {
     font-weight: 700;
@@ -240,7 +230,7 @@ input, textarea {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1070px) {
     h2 :is(span) {
         font-size: large;
     }
@@ -266,4 +256,26 @@ input, textarea {
         width: 100%;
         margin-left: 0;
     }
+
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    #clearAll,
+    #proceedTo {
+        width: 100%;
+    }
+.table {
+    margin: 1rem auto;
+    width: 70%;
+    height: fit-content;
+    border-radius: solid 10px 5px;
+    border-style: double;
+}
+
+#aboutTable {
+    font-weight: 600;
+    font-style: italic;
+}
 }
