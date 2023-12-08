@@ -256,7 +256,7 @@ productSort.addEventListener('click', function(){
                   <p class="card-text" id="names">${item.genre}</p>
                   <p class="card-text">R${item.amount},00</p>
                </div>
-               <button class="btn btn-primary" id="btn btn-cart">Add to Cart</button>
+               <button class="btn btn-primary" id="btn">Add to Cart</button>
             </div>
          </div>
          
@@ -270,24 +270,25 @@ function addCartToStorage(){
     localStorage.setItem("cart", JSON.stringify(cart))
 }
 
-let add = [...document.querySelectorAll("#btn")]
 let cart = []
 
-add.forEach((e, i)=>{
-    e.addEventListener("click", ()=>{
-        let prod = manga.find(e => e.id === i)
-        let dupe = cart.find(e => e.id === i)
+let add = [...document.querySelectorAll("#btn")];
+add.forEach((e, i) => {
+    e.addEventListener("click", () => {
+        let prod = manga.find(e => e.id === i);
+        let dupe = cart.find(e => e.id === i);
 
-        if(dupe){
-            dupe.quantity++
-            alert("Item already in cart, increasing quantity")
-        } else{
-            cart.push(prod)
-            alert("Item added to cart")
+        if (dupe) {
+            dupe.quantity++;
+            alert("Item already in cart, increasing quantity");
+        } else {
+            cart.push(prod);
+            alert("Item added to cart");
         }
-        addCartToStorage()
-    })
-})
+        addCartToStorage();
+        updateCartTotal(); 
+    });
+});
 
 
 //Adding it to the checkout
@@ -295,17 +296,5 @@ let checkOutList = JSON.parse(
     localStorage.getItem('checkout')) ? 
     JSON.parse(localStorage.getItem('checkout')) :
     []
-
-    function checkOutManga(item) {
-        try {
-            
-            checkOutList.push(item);
-            document.querySelector('[cartSize]').textContent = checkOutList.length
-            localStorage.setItem('checkout', 
-            JSON.stringify(checkOutList))
-        } catch (e) {
-            // console.log(`Error message: ${e.message}`);
-        }
-    }
 
 

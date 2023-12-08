@@ -60,27 +60,34 @@
             </div>
         </nav>
 
-        <main class="container-fluid">
+        <main>
 
             <section class="container">
 
               <div class="container mt-4">
                 <h2 class="highlighted-text">Checkout</h2> <br><br>
-                <div class="table-respond">
-                   <table class="table table-bordered border-light">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
-                            <th>Delete</th>
-                          </tr>
-                    </thead>
-                    <tbody id="chekOutBody"></tbody>
-                </table> <br><br>
-                </div>
-              <button class="btn btn-primary" onclick="completePurchase()">Thank you for Purchase</button>
-            </div>
+              <table class="table">
+                <thead>
+                  <th>Genre</th>
+                  <th>About</th>
+                  <th>Quantity</th>
+                  <th>Amount</th>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span id="cartTotal">R0,00</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <button id="clearAll" class="btn btn-success">Clear All</button>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
             
             </section>
         </main>

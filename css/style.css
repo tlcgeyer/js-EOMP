@@ -75,7 +75,8 @@ h2 :is(p) {
 }
 
 #names {
-    color: #FFA400;
+    color: #ffa400;
+    font-weight: 500;
 }
 
 .card-img-top {
@@ -174,24 +175,31 @@ body {
 }
 
 
-/*Products*/ 
+/*Checkout*/
+.table {
+    margin: 1rem auto;
+    width: 100%;
+    border-radius: solid 10px 5px;
+    border-style: double;
+}
 
+#aboutTable {
+    font-weight: 600;
+    font-style: italic;
+}
 
+#changeIt {
+    font-weight: 700;
+}
+
+#cartTotal {
+    font-weight: 700;
+}
 /*Footer*/
 .lead {
     color: black;
 }
 
-
-#productWrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/*Checkout*/
-#mangaTable .card {
-    min-height: 400px; /
-}
 
 
 /*Contact*/
