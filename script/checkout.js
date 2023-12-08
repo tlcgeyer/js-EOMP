@@ -19,20 +19,21 @@ function updateCheckout() {
     localStorage.setItem("checkout", JSON.stringify(checkOutList));
 }
 
-// function checkOut() {
-//     if (cart.length === 0) {
-//        alert("The cart is empty. Add some manga before checking out");
-//       return;
-//     }
-//     checkOutList = [...cart];
+//to dingsies the cart
+function checkOut() {
+    if (cart.length === 0) {
+       alert("The cart is empty. Add some manga before checking out");
+      return;
+    }
+    checkOutList = [...cart];
   
-//  // clearing it after checking out
-//  cart = [];
-//  localStorage.removeItem("cart");
+ // clearing it after checking out
+ cart = [];
+ localStorage.removeItem("cart");
 
-//  updateCheckout();
-//  displayCheckOut();
-// }
+ updateCheckout();
+ displayCheckOut();
+}
 
     cart.forEach((item) => {
       let totalAmount = item.quantity * item.amount ;
@@ -57,7 +58,6 @@ function updateCheckout() {
 let clearAll = document.querySelector('#clearAll');
 clearAll.addEventListener('click', () => {
     localStorage.removeItem('cart');
-    tbody.innerHTML = "Please do add a manga to the checkout out list....";
     document.querySelector('#cartTotal').textContent = ""
     location.reload()
 })
