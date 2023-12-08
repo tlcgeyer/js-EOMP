@@ -180,7 +180,10 @@ else {
     <div class="spinner-border" role="status">
       <span class="sr-only"></span>
     </div>
+  </div>
+  <div><p>Ayo, what you searching? 😑</p>
   </div>`;
+  
 }}
 displayProducts(manga)
 
@@ -217,7 +220,9 @@ searchManga.addEventListener(`keyup`, () => {
             <div class="spinner-border" role="status">
               <span class="sr-only"></span>
             </div>
-          </div>`;
+          </div>
+          <div><p>Ayo, what you searching 😑</p>
+  </div>`;
         }
         
 })
