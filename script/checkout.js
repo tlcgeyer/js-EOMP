@@ -39,14 +39,15 @@ function checkOut() {
   
       tbody.innerHTML += `
         <tr>
-          <td id="names">${item.genre} </td>
+          <td id="names">${item.name} </td>
+          <td id="names">${item.genre}</td>
           <td id="aboutTable">${item.about}</td>
           <td id="changeIt">${item.quantity}</td>
           <td id="changeIt">R${totalAmount},00</td>
         </tr>
       `;
       
-       let cartTotal = cart.reduce((total, item) => total + item.quantity * item.amount, 0   );
+       let cartTotal = cart.reduce((total, item) => total + item.quantity * item.amount, 0 );
         document.querySelector('#cartTotal').textContent = `R${cartTotal},00`;
 
         
@@ -55,12 +56,14 @@ function checkOut() {
 //de clear button
 let clearAll = document.querySelector('#clearAll');
 clearAll.addEventListener('click', () => {
-    localStorage.removeItem('checkout');
+    localStorage.removeItem('cart');
     tbody.innerHTML = "Please do add a manga to the checkout out list....";
+    document.querySelector('#cartTotal').textContent = ""
+    location.reload()
 })
 
 
- // alert functon for a success purchase
+ // alert funkton for a success purchase
 function completePurchase() {
     alert('Thank you for your purchase from InkWhirlWind!');
 }

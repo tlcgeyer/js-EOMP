@@ -67,29 +67,44 @@
 
       <div class="row d-block d-flex">
         <div class="row">
-          <div class="col">
-          <input id="searchProducts" type="text" class="form-control" placeholder="Search for manga by genre here..." data-search-products>
         </div>
 
-        <div class="col d-flex justify-content-end">
-          <button class="btn btn-dark text-warning" id="sortProducts" data-sorted-products>
-            Sorting
-          </button>
-        </div>
-        </div>
-        
-        <table>
+        <table class="table">
           <thead>
             <tr>
-              
+              <th>Name</th>
               <th>Genre</th>
               <th>Image</th>
+              <th>About</th>
               <th>Amount</th>
-              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" placeholder="name..." id="newName">
+              </td>
+              <td>
+                <input type="text" placeholder="genre..." id="newGenre">
+              </td>
+              <td>
+                <input type="text" placeholder="image..." id="newImage">
+              </td>
+              <td>
+                <input type="text" placeholder="about..." id="newAbout">
+              </td>
+              <td>
+                <input type="text" placeholder="amount..." id="newAmount">
+              </td>
+              <td>
+                <button type="button" class="btn btn-success w-50" id="btn">Add new manga!</button>
+              </td>
             </tr>
           </thead>
-          <tbody table-products></tbody>
+          <tbody id="mangaTableBod"></tbody>
         </table>
+
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        </div>
       </div>
     </main>
 <br><br>
@@ -102,7 +117,8 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
 
     <!--js script-->
     <script src="../script/admin.js"></script>
